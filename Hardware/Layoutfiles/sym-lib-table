@@ -1,0 +1,9 @@
+(sym_lib_table
+  (lib (name TLV803EA26DBZR)(type Legacy)(uri "D:/Projects/LoRa Tracker/LoRa_Tracker/Component_Libs/TLV803EA26DBZR/TLV803EA26DBZR.lib")(options "")(descr ""))
+  (lib (name ATECC608A)(type Legacy)(uri "D:/Projects/LoRa Tracker/LoRa_Tracker/Component_Libs/ATECC608A/ATECC608A.lib")(options "")(descr ""))
+  (lib (name SI2347DS)(type Legacy)(uri "D:/Projects/LoRa Tracker/LoRa_Tracker/Component_Libs/SI2347DS/SI2347DS.lib")(options "")(descr ""))
+  (lib (name LoRa_Tracker-rescue)(type Legacy)(uri ${KIPRJMOD}/LoRa_Tracker-rescue.lib)(options "")(descr ""))
+  (lib (name TPS22917)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/TPS22917/TPS22917.lib)(options "")(descr ""))
+  (lib (name MAX40200)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/Maxim/MAX40200.lib)(options "")(descr ""))
+  (lib (name PUSB2X4Y)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/PUSB/PUSB2X4Y.lib)(options "")(descr ""))
+)
