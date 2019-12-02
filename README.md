@@ -1,6 +1,6 @@
 # Elektor LoRa Node
 
-## This is a LoRa and LoRaWAN Core Baord based on a STM32F072
+## This is a Elektor LoRa Node based on a STM32F072
 
 This is the hardware and software repository for the Elektor LoRa node.
 This is open hardware under the CERN OHL v1.2, so feel free to grab your copy and have fun. 
