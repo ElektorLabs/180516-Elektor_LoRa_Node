@@ -1,11 +1,10 @@
 EESchema Schematic File Version 4
-LIBS:LoRa_Tracker-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "LoRa Node Experimental Platform"
+Title "Elektor LoRa Node"
 Date "2019-11-01"
 Rev "V3.2"
 Comp "Elektor Labs"
@@ -18,8 +17,8 @@ $Comp
 L RF_AM_FM:RFM95W-868S2 MOD1
 U 1 1 5D5522D6
 P 1900 6200
-F 0 "MOD1" H 2350 6850 50  0000 C TNN
-F 1 "RFM95W-868S2" H 2300 6700 50  0000 C CNN
+F 0 "MOD1" H 2175 6850 50  0000 C TNN
+F 1 "RFM95W" H 2300 6700 50  0000 C CNN
 F 2 "RFM95W-868S2:XCVR_RFM95W-868S2" H -1400 7850 50  0001 C CNN
 F 3 "http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf" H -1400 7850 50  0001 C CNN
 	1    1900 6200
@@ -37,7 +36,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/tlv755p.pdf" H 6125 875 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR02
+L power:GND #PWR02
 U 1 1 5D5529C2
 P 675 2750
 F 0 "#PWR02" H 675 2500 50  0001 C CNN
@@ -48,7 +47,7 @@ F 3 "" H 675 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR012
+L power:GND #PWR012
 U 1 1 5D552C97
 P 6125 1325
 F 0 "#PWR012" H 6125 1075 50  0001 C CNN
@@ -65,7 +64,7 @@ Text GLabel 1900 5400 1    50   Input ~ 0
 Wire Wire Line
 	1900 5475 1900 5650
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR06
+L power:GND #PWR06
 U 1 1 5D553954
 P 1900 7325
 F 0 "#PWR06" H 1900 7075 50  0001 C CNN
@@ -87,11 +86,11 @@ Wire Wire Line
 	2000 7200 1900 7200
 Connection ~ 1900 7200
 $Comp
-L LoRa_Tracker-rescue:Antenna-Device ANT1
+L Device:Antenna ANT1
 U 1 1 5D553E42
 P 775 5525
 F 0 "ANT1" H 855 5516 50  0000 L CNN
-F 1 "Antenna" H 855 5425 50  0000 L CNN
+F 1 "868MHz" H 855 5425 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 775 5525 50  0001 C CNN
 F 3 "~" H 775 5525 50  0001 C CNN
 	1    775  5525
@@ -104,7 +103,7 @@ Wire Wire Line
 Wire Wire Line
 	1800 7200 1900 7200
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C2
+L Device:C_Small C2
 U 1 1 5D55472C
 P 2350 5650
 F 0 "C2" V 2400 5800 50  0000 C TNN
@@ -118,7 +117,7 @@ Connection ~ 1900 5650
 Wire Wire Line
 	1900 5650 1900 5700
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR07
+L power:GND #PWR07
 U 1 1 5D554DB9
 P 2650 5625
 F 0 "#PWR07" H 2650 5375 50  0001 C CNN
@@ -169,9 +168,9 @@ Text GLabel 1250 6600 0    50   Input ~ 0
 RFM95_DIO2
 Wire Wire Line
 	1400 6500 1250 6500
-Text GLabel 7775 1800 2    50   Input ~ 0
+Text GLabel 10350 1975 0    50   Input ~ 0
 GPS_TXD
-Text GLabel 7775 1700 2    50   Input ~ 0
+Text GLabel 10350 1875 0    50   Input ~ 0
 GPS_RXD
 Text GLabel 4650 5150 0    50   Input ~ 0
 RFM95_DIO0
@@ -204,7 +203,7 @@ SWCLK
 Text GLabel 4600 2750 0    50   Input ~ 0
 ~RST
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR019
+L power:GND #PWR019
 U 1 1 5D6A8C45
 P 5400 5950
 F 0 "#PWR019" H 5400 5700 50  0001 C CNN
@@ -217,52 +216,52 @@ $EndComp
 Text GLabel 5400 1725 1    50   Input ~ 0
 3V3
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR021
+L power:GND #PWR021
 U 1 1 5D6F1A67
-P 7725 6325
-F 0 "#PWR021" H 7725 6075 50  0001 C CNN
-F 1 "GND" H 7730 6152 50  0000 C CNN
-F 2 "" H 7725 6325 50  0001 C CNN
-F 3 "" H 7725 6325 50  0001 C CNN
-	1    7725 6325
-	1    0    0    -1  
+P 8925 6325
+F 0 "#PWR021" H 8925 6075 50  0001 C CNN
+F 1 "GND" H 8930 6152 50  0000 C CNN
+F 2 "" H 8925 6325 50  0001 C CNN
+F 3 "" H 8925 6325 50  0001 C CNN
+	1    8925 6325
+	-1   0    0    -1  
 $EndComp
-Text GLabel 8750 5850 2    50   Input ~ 0
+Text GLabel 7900 5850 0    50   Input ~ 0
 3V3
-Text GLabel 9450 6150 2    50   Input ~ 0
+Text GLabel 7200 6150 0    50   Input ~ 0
 I2C_SDA
-Text GLabel 9450 6050 2    50   Input ~ 0
+Text GLabel 7200 6050 0    50   Input ~ 0
 I2C_SCL
 Text GLabel 10175 4100 0    50   Input ~ 0
 SWDIO
 Text GLabel 10175 4200 0    50   Input ~ 0
 SWCLK
-Text GLabel 9825 4850 0    50   Input ~ 0
+Text GLabel 9925 4525 0    50   Input ~ 0
 ~RST
 Text GLabel 6250 5150 2    50   Input ~ 0
-UNUSED_05
+PA10
 Text GLabel 4650 5350 0    50   Input ~ 0
-UNUSED_00
+PB12
 Text GLabel 4650 5450 0    50   Input ~ 0
-UNUSED_01
+PB13
 Text GLabel 4650 5550 0    50   Input ~ 0
-UNUSED_02
+PB14
 Text GLabel 4650 5650 0    50   Input ~ 0
-UNUSED_03
+PB15
 Text GLabel 6250 5050 2    50   Input ~ 0
-UNUSED_04
+PA9
 Text GLabel 10100 3000 0    50   Input ~ 0
-UNUSED_01
+PB13
 Text GLabel 10100 3100 0    50   Input ~ 0
-UNUSED_02
+PB14
 Text GLabel 10100 3200 0    50   Input ~ 0
-UNUSED_03
+PB15
 Text GLabel 10100 3300 0    50   Input ~ 0
-UNUSED_04
+PA9
 Text GLabel 10100 3400 0    50   Input ~ 0
-UNUSED_05
+PA10
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR023
+L power:GND #PWR023
 U 1 1 5D85D1A1
 P 9550 4050
 F 0 "#PWR023" H 9550 3800 50  0001 C CNN
@@ -287,7 +286,7 @@ I2C_SDA
 Text GLabel 6050 1675 2    50   Input ~ 0
 VSupply
 $Comp
-L LoRa_Tracker-rescue:R_Small-Device R6
+L Device:R_Small R6
 U 1 1 5DAB71E0
 P 7225 4125
 F 0 "R6" H 7284 4163 39  0000 L CNN
@@ -298,7 +297,7 @@ F 3 "~" H 7225 4125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:R_Small-Device R7
+L Device:R_Small R7
 U 1 1 5DAB7365
 P 7225 4375
 F 0 "R7" H 7284 4413 39  0000 L CNN
@@ -309,7 +308,7 @@ F 3 "~" H 7225 4375 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:TLV809K33-TLV803EA26DBZR IC1
+L TLV803EA26DBZR:TLV809K33 IC1
 U 1 1 5DC0935F
 P 1550 1550
 F 0 "IC1" V 1250 1300 50  0000 C CNN
@@ -320,22 +319,22 @@ F 3 "" H 1550 1550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:R_Small-Device R1
+L Device:R_Small R1
 U 1 1 5D720564
-P 1050 1950
-F 0 "R1" H 1109 1988 39  0000 L CNN
-F 1 "100k" H 1109 1913 39  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1050 1950 50  0001 C CNN
-F 3 "~" H 1050 1950 50  0001 C CNN
-	1    1050 1950
+P 1050 1750
+F 0 "R1" H 1109 1788 39  0000 L CNN
+F 1 "100k" H 1109 1713 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1050 1750 50  0001 C CNN
+F 3 "~" H 1050 1750 50  0001 C CNN
+	1    1050 1750
 	1    0    0    -1  
 $EndComp
-Text GLabel 10500 1500 2    50   Input ~ 0
+Text GLabel 7625 1675 0    50   Input ~ 0
 3V3
-Text GLabel 10500 1700 2    50   Input ~ 0
+Text GLabel 7625 1875 0    50   Input ~ 0
 GPS_ACTIVE_ON
 $Comp
-L LoRa_Tracker-rescue:R_Small-Device R4
+L Device:R_Small R4
 U 1 1 5DA3C77F
 P 4500 3350
 F 0 "R4" H 4559 3388 39  0000 L CNN
@@ -346,7 +345,7 @@ F 3 "~" H 4500 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR017
+L power:GND #PWR017
 U 1 1 5DA58856
 P 4500 3450
 F 0 "#PWR017" H 4500 3200 50  0001 C CNN
@@ -359,7 +358,7 @@ $EndComp
 Text GLabel 3950 3250 0    50   Input ~ 0
 3V3
 $Comp
-L LoRa_Tracker-rescue:SW_Push-Switch S2
+L Switch:SW_Push S2
 U 1 1 5DC6B793
 P 4200 3250
 F 0 "S2" H 4100 3300 50  0000 R BNN
@@ -370,7 +369,7 @@ F 3 "" H 4200 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:SW_Push-Switch S1
+L Switch:SW_Push S1
 U 1 1 5DC6BAA9
 P 4200 3050
 F 0 "S1" H 4100 3100 50  0000 R BNN
@@ -381,7 +380,7 @@ F 3 "" H 4200 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR013
+L power:GND #PWR013
 U 1 1 5DCDEE22
 P 3550 3050
 F 0 "#PWR013" H 3550 2800 50  0001 C CNN
@@ -391,32 +390,32 @@ F 3 "" H 3550 3050 50  0001 C CNN
 	1    3550 3050
 	1    0    0    -1  
 $EndComp
-Text GLabel 9350 5600 2    50   Input ~ 0
+Text GLabel 7300 5600 0    50   Input ~ 0
 3V3
 $Comp
-L LoRa_Tracker-rescue:R_Small-Device R9
+L Device:R_Small R9
 U 1 1 5DED2559
-P 9300 5750
-F 0 "R9" H 9359 5788 39  0000 L CNN
-F 1 "4k7" H 9359 5713 39  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9300 5750 50  0001 C CNN
-F 3 "~" H 9300 5750 50  0001 C CNN
-	1    9300 5750
-	1    0    0    -1  
+P 7350 5750
+F 0 "R9" H 7409 5788 39  0000 L CNN
+F 1 "4k7" H 7409 5713 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7350 5750 50  0001 C CNN
+F 3 "~" H 7350 5750 50  0001 C CNN
+	1    7350 5750
+	-1   0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:R_Small-Device R8
+L Device:R_Small R8
 U 1 1 5DF35546
-P 9100 5750
-F 0 "R8" H 8925 5725 39  0000 L CNN
-F 1 "4k7" H 8975 5575 39  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9100 5750 50  0001 C CNN
-F 3 "~" H 9100 5750 50  0001 C CNN
-	1    9100 5750
-	1    0    0    -1  
+P 7550 5750
+F 0 "R8" H 7375 5725 39  0000 L CNN
+F 1 "4k7" H 7425 5575 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7550 5750 50  0001 C CNN
+F 3 "~" H 7550 5750 50  0001 C CNN
+	1    7550 5750
+	-1   0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C1
+L Device:C_Small C1
 U 1 1 5D55463C
 P 2350 5475
 F 0 "C1" V 2121 5475 50  0000 C BNN
@@ -431,7 +430,7 @@ Wire Wire Line
 Wire Wire Line
 	1900 5650 2250 5650
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR018
+L power:GND #PWR018
 U 1 1 5D812567
 P 5050 2725
 F 0 "#PWR018" H 5050 2475 50  0001 C CNN
@@ -442,7 +441,7 @@ F 3 "" H 5050 2725 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C10
+L Device:C_Small C10
 U 1 1 5DAD1368
 P 5300 2325
 F 0 "C10" V 5250 2475 50  0000 L TNN
@@ -453,7 +452,7 @@ F 3 "~" H 5300 2325 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C9
+L Device:C_Small C9
 U 1 1 5DAE2E61
 P 5300 2125
 F 0 "C9" V 5225 2275 50  0000 L TNN
@@ -467,15 +466,15 @@ Wire Wire Line
 	1900 5400 1900 5475
 Connection ~ 1900 5475
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C12
+L Device:C_Small C12
 U 1 1 5E1C5714
-P 8300 5400
-F 0 "C12" V 8000 5350 50  0000 L TNN
-F 1 "100nF" V 8150 5250 50  0000 L BNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8300 5400 50  0001 C CNN
-F 3 "~" H 8300 5400 50  0001 C CNN
-	1    8300 5400
-	0    -1   1    0   
+P 8350 5400
+F 0 "C12" V 8050 5350 50  0000 L TNN
+F 1 "100nF" V 8200 5250 50  0000 L BNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8350 5400 50  0001 C CNN
+F 3 "~" H 8350 5400 50  0001 C CNN
+	1    8350 5400
+	0    1    1    0   
 $EndComp
 Text GLabel 3400 6900 0    50   Input ~ 0
 RFM95_SCK
@@ -488,7 +487,7 @@ SPI_NOR_NCS
 Text GLabel 3400 7000 0    50   Input ~ 0
 SPI_NOR_NCS
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR016
+L power:GND #PWR016
 U 1 1 5E6A90A7
 P 4250 7500
 F 0 "#PWR016" H 4250 7250 50  0001 C CNN
@@ -503,7 +502,7 @@ Text GLabel 4300 6400 2    50   Input ~ 0
 Text GLabel 3050 7100 0    50   Input ~ 0
 3V3
 $Comp
-L LoRa_Tracker-rescue:AT25SF081-SSHD-X-Memory_Flash IC3
+L Memory_Flash:AT25SF081-SSHD-X IC3
 U 1 1 5E3EE24B
 P 4250 7000
 F 0 "IC3" H 4891 7046 50  0000 L CNN
@@ -523,7 +522,7 @@ I2C_SDA
 Text GLabel 10100 3500 0    50   Input ~ 0
 I2C_SCL
 $Comp
-L LoRa_Tracker-rescue:Fuse_Small-Device F1
+L Device:Fuse_Small F1
 U 1 1 5D6138A8
 P 2550 1100
 F 0 "F1" H 2550 1285 50  0000 C CNN
@@ -534,7 +533,7 @@ F 3 "~" H 2550 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C7
+L Device:C_Small C7
 U 1 1 5D667596
 P 3900 6400
 F 0 "C7" V 3950 6550 50  0000 C TNN
@@ -545,7 +544,7 @@ F 3 "~" H 3900 6400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR014
+L power:GND #PWR014
 U 1 1 5D67D55E
 P 3800 6400
 F 0 "#PWR014" H 3800 6150 50  0001 C CNN
@@ -556,18 +555,18 @@ F 3 "" H 3800 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C6
+L Device:C_Small C6
 U 1 1 5D67D8B4
 P 6475 975
 F 0 "C6" H 6275 1025 50  0000 L TNN
-F 1 "100nF" H 6175 825 50  0000 L BNN
+F 1 "470nF" H 6175 825 50  0000 L BNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6475 975 50  0001 C CNN
 F 3 "~" H 6475 975 50  0001 C CNN
 	1    6475 975 
 	-1   0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C5
+L Device:C_Small C5
 U 1 1 5D67DE50
 P 5675 1025
 F 0 "C5" H 5689 1088 50  0000 L CNN
@@ -578,7 +577,7 @@ F 3 "~" H 5675 1025 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR08
+L power:GND #PWR08
 U 1 1 5D6D7949
 P 1475 1900
 F 0 "#PWR08" H 1475 1650 50  0001 C CNN
@@ -589,7 +588,7 @@ F 3 "" H 1475 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR015
+L power:GND #PWR015
 U 1 1 5D6D79BA
 P 6475 1075
 F 0 "#PWR015" H 6475 825 50  0001 C CNN
@@ -604,18 +603,18 @@ Wire Wire Line
 Wire Wire Line
 	1250 6600 1400 6600
 $Comp
-L LoRa_Tracker-rescue:Battery_Cell-Device BT2
+L Device:Battery_Cell BT2
 U 1 1 5D7A06D6
-P 925 2150
-F 0 "BT2" H 1043 2246 50  0000 L CNN
-F 1 "multicomp pro AAA Battery Holder with PCB Pins" V 775 2050 50  0001 C BNN
-F 2 "PUSB:AAA_holder" V 925 2210 50  0001 C CNN
-F 3 "~" V 925 2210 50  0001 C CNN
-	1    925  2150
+P 875 2000
+F 0 "BT2" H 993 2096 50  0000 L CNN
+F 1 "multicomp pro AAA Battery Holder with PCB Pins" V 725 1900 50  0001 C BNN
+F 2 "PUSB:AAA_holder" V 875 2060 50  0001 C CNN
+F 3 "~" V 875 2060 50  0001 C CNN
+	1    875  2000
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C3
+L Device:C_Small C3
 U 1 1 5D7B6BF4
 P 1475 1350
 F 0 "C3" H 1316 1438 50  0000 L TNN
@@ -626,7 +625,7 @@ F 3 "~" H 1475 1350 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR010
+L power:GND #PWR010
 U 1 1 5D7CCF4B
 P 5675 1275
 F 0 "#PWR010" H 5675 1025 50  0001 C CNN
@@ -639,27 +638,27 @@ $EndComp
 $Comp
 L Device:CP C4
 U 1 1 5D7C90C9
-P 4150 1525
-F 0 "C4" H 4268 1571 50  0000 L CNN
-F 1 "470u" H 4268 1480 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 4188 1375 50  0001 C CNN
-F 3 "~" H 4150 1525 50  0001 C CNN
-	1    4150 1525
+P 3775 1525
+F 0 "C4" H 3893 1571 50  0000 L CNN
+F 1 "470u" H 3893 1480 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 3813 1375 50  0001 C CNN
+F 3 "~" H 3775 1525 50  0001 C CNN
+	1    3775 1525
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR09
+L power:GND #PWR09
 U 1 1 5D7C93DF
-P 4150 1675
-F 0 "#PWR09" H 4150 1425 50  0001 C CNN
-F 1 "GND" H 4155 1502 50  0000 C CNN
-F 2 "" H 4150 1675 50  0001 C CNN
-F 3 "" H 4150 1675 50  0001 C CNN
-	1    4150 1675
+P 3775 1675
+F 0 "#PWR09" H 3775 1425 50  0001 C CNN
+F 1 "GND" H 3780 1502 50  0000 C CNN
+F 2 "" H 3775 1675 50  0001 C CNN
+F 3 "" H 3775 1675 50  0001 C CNN
+	1    3775 1675
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:SI2347DS-SI2347DS T1
+L SI2347DS:SI2347DS T1
 U 1 1 5D69869E
 P 800 1250
 F 0 "T1" V 1025 1000 50  0000 C CNN
@@ -672,7 +671,7 @@ $EndComp
 Text Label 10150 2600 0    50   ~ 0
 VBAT
 Text GLabel 10100 2900 0    50   Input ~ 0
-UNUSED_00
+PB12
 Text GLabel 725  850  2    50   Input ~ 0
 VBAT
 Text GLabel 10100 2600 0    50   Input ~ 0
@@ -702,7 +701,7 @@ $EndComp
 Text GLabel 4750 2400 1    50   Input ~ 0
 3V3
 $Comp
-L LoRa_Tracker-rescue:R_Small-Device R5
+L Device:R_Small R5
 U 1 1 5DD28868
 P 4750 2550
 F 0 "R5" H 4691 2512 39  0000 R CNN
@@ -730,13 +729,8 @@ Wire Wire Line
 Connection ~ 4750 3050
 Wire Wire Line
 	3950 3250 4000 3250
-Wire Wire Line
-	4400 3250 4500 3250
-Connection ~ 4500 3250
-Wire Wire Line
-	4500 3250 4800 3250
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C8
+L Device:C_Small C8
 U 1 1 5D84A692
 P 5300 1925
 F 0 "C8" V 5375 2075 50  0000 L CNN
@@ -747,7 +741,7 @@ F 3 "~" H 5300 1925 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C11
+L Device:C_Small C11
 U 1 1 5D759A33
 P 5300 2525
 F 0 "C11" V 5225 2675 50  0000 L TNN
@@ -762,7 +756,7 @@ GPS_ACTIVE_ON
 Text GLabel 4650 4750 0    50   Input ~ 0
 I2C_SCL
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR020
+L power:GND #PWR020
 U 1 1 5DAE458D
 P 7225 4475
 F 0 "#PWR020" H 7225 4225 50  0001 C CNN
@@ -860,27 +854,16 @@ Wire Wire Line
 	5300 2850 5400 2850
 Connection ~ 5400 2850
 Wire Wire Line
-	5400 1925 5400 1725
-Connection ~ 5400 2125
+	675  2300 875  2300
 Wire Wire Line
-	5400 2125 5400 1925
-Connection ~ 5400 2325
-Wire Wire Line
-	5400 2325 5400 2125
-Connection ~ 5400 2525
-Wire Wire Line
-	5400 2525 5400 2325
-Wire Wire Line
-	675  2300 925  2300
-Wire Wire Line
-	925  2300 925  2250
+	875  2300 875  2100
 Wire Wire Line
 	675  2300 675  2750
 Wire Wire Line
-	925  2300 1050 2300
-Connection ~ 925  2300
+	875  2300 1050 2300
+Connection ~ 875  2300
 Wire Wire Line
-	1050 1550 1050 1850
+	1050 1550 1050 1650
 Wire Wire Line
 	675  850  725  850 
 Wire Wire Line
@@ -921,37 +904,37 @@ Wire Wire Line
 Wire Wire Line
 	3425 7200 3650 7200
 Wire Wire Line
-	8650 5850 8750 5850
+	8000 5850 7900 5850
 Wire Wire Line
-	8400 5400 8650 5400
+	8250 5400 8000 5400
 Wire Wire Line
-	8650 5400 8650 5850
+	8000 5400 8000 5850
 Wire Wire Line
-	8650 5850 8500 5850
-Connection ~ 8650 5850
+	8000 5850 8150 5850
+Connection ~ 8000 5850
 Wire Wire Line
-	8500 6150 9300 6150
+	8150 6150 7350 6150
 Wire Wire Line
-	9450 6050 9100 6050
+	7200 6050 7550 6050
 Wire Wire Line
-	9300 5850 9300 6150
-Connection ~ 9300 6150
+	7350 5850 7350 6150
+Connection ~ 7350 6150
 Wire Wire Line
-	9300 6150 9450 6150
+	7350 6150 7200 6150
 Wire Wire Line
-	9100 5850 9100 6050
-Connection ~ 9100 6050
+	7550 5850 7550 6050
+Connection ~ 7550 6050
 Wire Wire Line
-	9100 6050 8500 6050
+	7550 6050 8150 6050
 Wire Wire Line
-	9100 5650 9100 5600
+	7550 5650 7550 5600
 Wire Wire Line
-	9100 5600 9300 5600
+	7550 5600 7350 5600
 Wire Wire Line
-	9300 5650 9300 5600
-Connection ~ 9300 5600
+	7350 5650 7350 5600
+Connection ~ 7350 5600
 Wire Wire Line
-	9300 5600 9350 5600
+	7350 5600 7300 5600
 Wire Wire Line
 	10200 2700 10400 2700
 Wire Wire Line
@@ -982,7 +965,7 @@ Wire Wire Line
 	10400 3700 10100 3700
 Wire Wire Line
 	10100 3800 10400 3800
-Text GLabel 3300 1875 0    50   Input ~ 0
+Text GLabel 2900 650  0    50   Input ~ 0
 VUSB
 $Comp
 L Connector:Conn_01x04_Male K3
@@ -1008,7 +991,7 @@ Wire Wire Line
 Wire Wire Line
 	1225 4425 1150 4425
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR03
+L power:GND #PWR03
 U 1 1 5DA9328C
 P 1225 4550
 F 0 "#PWR03" H 1225 4300 50  0001 C CNN
@@ -1025,38 +1008,38 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x05_Female K4
 U 1 1 5DB0861E
-P 7375 1700
-F 0 "K4" H 7269 2085 50  0000 C CNN
-F 1 "Conn_01x05_Female" H 7269 1994 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7375 1700 50  0001 C CNN
-F 3 "~" H 7375 1700 50  0001 C CNN
-	1    7375 1700
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	7575 1700 7775 1700
-Wire Wire Line
-	7775 1800 7575 1800
-$Comp
-L LoRa_Tracker-rescue:GND-power #PWR022
-U 1 1 5DC76CF6
-P 8300 1825
-F 0 "#PWR022" H 8300 1575 50  0001 C CNN
-F 1 "GND" H 8305 1652 50  0000 C CNN
-F 2 "" H 8300 1825 50  0001 C CNN
-F 3 "" H 8300 1825 50  0001 C CNN
-	1    8300 1825
+P 10750 1875
+F 0 "K4" H 10644 2260 50  0000 C CNN
+F 1 "Conn_01x05_Female" H 10644 2169 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 10750 1875 50  0001 C CNN
+F 3 "~" H 10750 1875 50  0001 C CNN
+	1    10750 1875
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7575 1600 8300 1600
+	10550 1875 10350 1875
 Wire Wire Line
-	8300 1600 8300 1825
+	10350 1975 10550 1975
+$Comp
+L power:GND #PWR022
+U 1 1 5DC76CF6
+P 9825 2000
+F 0 "#PWR022" H 9825 1750 50  0001 C CNN
+F 1 "GND" H 9830 1827 50  0000 C CNN
+F 2 "" H 9825 2000 50  0001 C CNN
+F 3 "" H 9825 2000 50  0001 C CNN
+	1    9825 2000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 1775 9825 1775
+Wire Wire Line
+	9825 1775 9825 2000
 Connection ~ 675  2300
 Wire Wire Line
 	675  1850 675  2300
 $Comp
-L LoRa_Tracker-rescue:Battery_Cell-Device BT1
+L Device:Battery_Cell BT1
 U 1 1 5D552408
 P 675 1750
 F 0 "BT1" H 793 1846 50  0000 L CNN
@@ -1067,22 +1050,20 @@ F 3 "~" V 675 1810 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRa_Tracker-rescue:Fuse_Small-Device F2
+L Device:Fuse_Small F2
 U 1 1 5DCB301D
-P 3450 1875
-F 0 "F2" H 3450 2060 50  0000 C CNN
-F 1 "0ZCK0050AF2E " H 3575 2000 50  0000 C CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3450 1875 50  0001 C CNN
-F 3 "~" H 3450 1875 50  0001 C CNN
-	1    3450 1875
-	1    0    0    -1  
+P 3050 650
+F 0 "F2" H 3050 835 50  0000 C CNN
+F 1 "0ZCK0050AF2E " H 3175 775 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3050 650 50  0001 C CNN
+F 3 "~" H 3050 650 50  0001 C CNN
+	1    3050 650 
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3300 1875 3350 1875
+	2900 650  2950 650 
 Wire Wire Line
-	925  1950 925  1400
-Wire Wire Line
-	925  1400 675  1400
+	875  1800 875  1400
 Connection ~ 675  1400
 Wire Wire Line
 	675  1400 675  1550
@@ -1096,50 +1077,50 @@ Wire Wire Line
 Wire Wire Line
 	675  1250 850  1250
 Wire Wire Line
-	1050 2050 1050 2300
+	1050 1850 1050 2300
 Text GLabel 6250 5650 2    50   Input ~ 0
 JTDI
 Text GLabel 3750 4450 0    50   Input ~ 0
 JTDO
-Text GLabel 10075 5050 0    50   Input ~ 0
+Text GLabel 10175 4725 0    50   Input ~ 0
 JTDI
 Wire Wire Line
-	10075 5050 10300 5050
-Text GLabel 10075 4950 0    50   Input ~ 0
+	10175 4725 10400 4725
+Text GLabel 10175 4625 0    50   Input ~ 0
 JTDO
 Wire Wire Line
-	10075 4950 10300 4950
+	10175 4625 10400 4625
 Wire Wire Line
 	10175 4200 10400 4200
 Wire Wire Line
 	10400 4100 10175 4100
 Wire Wire Line
-	9825 4850 10300 4850
+	9925 4525 10400 4525
 $Comp
-L LoRa_Tracker-rescue:ATECC608A-ATECC608A IC5
+L ATECC608A:ATECC608A IC5
 U 1 1 5D6F15FF
-P 8150 5750
-F 0 "IC5" H 8150 5915 50  0000 C CNN
-F 1 "ATECC608A" H 8150 5824 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8150 5200 50  0001 C CNN
-F 3 "" H 8150 5200 50  0001 C CNN
-	1    8150 5750
-	1    0    0    -1  
+P 8500 5750
+F 0 "IC5" H 8500 5915 50  0000 C CNN
+F 1 "ATECC608A" H 8500 5824 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8500 5200 50  0001 C CNN
+F 3 "" H 8500 5200 50  0001 C CNN
+	1    8500 5750
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	7400 5850 7400 5950
-Connection ~ 7400 5950
+	9250 5850 9250 5950
+Connection ~ 9250 5950
 Wire Wire Line
-	7400 5950 7400 6050
-Connection ~ 7400 6050
+	9250 5950 9250 6050
+Connection ~ 9250 6050
 Wire Wire Line
-	7400 6050 7400 6150
+	9250 6050 9250 6150
 Wire Wire Line
-	7400 5850 7800 5850
+	9250 5850 8850 5850
 Wire Wire Line
-	7400 5950 7800 5950
+	9250 5950 8850 5950
 Wire Wire Line
-	7400 6050 7800 6050
+	9250 6050 8850 6050
 $Comp
 L Connector:Conn_01x02_Male K2
 U 1 1 5E0846EB
@@ -1156,7 +1137,7 @@ VBAT
 Wire Wire Line
 	1275 3500 1125 3500
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR04
+L power:GND #PWR04
 U 1 1 5E09E066
 P 1400 3675
 F 0 "#PWR04" H 1400 3425 50  0001 C CNN
@@ -1173,123 +1154,119 @@ Wire Wire Line
 $Comp
 L Device:R_Small R11
 U 1 1 5DAFD103
-P 10350 1825
-F 0 "R11" H 10409 1863 39  0000 L CNN
-F 1 "10k" H 10409 1788 39  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10350 1825 50  0001 C CNN
-F 3 "~" H 10350 1825 50  0001 C CNN
-	1    10350 1825
-	1    0    0    -1  
+P 7775 2000
+F 0 "R11" H 7834 2038 39  0000 L CNN
+F 1 "10k" H 7834 1963 39  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7775 2000 50  0001 C CNN
+F 3 "~" H 7775 2000 50  0001 C CNN
+	1    7775 2000
+	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR025
 U 1 1 5DAFD228
-P 10350 2000
-F 0 "#PWR025" H 10350 1750 50  0001 C CNN
-F 1 "GND" H 10355 1827 50  0000 C CNN
-F 2 "" H 10350 2000 50  0001 C CNN
-F 3 "" H 10350 2000 50  0001 C CNN
-	1    10350 2000
-	1    0    0    -1  
+P 7775 2175
+F 0 "#PWR025" H 7775 1925 50  0001 C CNN
+F 1 "GND" H 7780 2002 50  0000 C CNN
+F 2 "" H 7775 2175 50  0001 C CNN
+F 3 "" H 7775 2175 50  0001 C CNN
+	1    7775 2175
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	10350 1700 10350 1725
+	7775 1875 7775 1900
 Wire Wire Line
-	10350 1700 10500 1700
+	7775 1875 7625 1875
 Wire Wire Line
-	9575 1600 9625 1600
-Connection ~ 10350 1700
+	8550 1775 8500 1775
+Connection ~ 7775 1875
 Wire Wire Line
-	10350 1925 10350 2000
+	7775 2100 7775 2175
 $Comp
 L power:GND #PWR024
 U 1 1 5DBF3E55
-P 9625 2000
-F 0 "#PWR024" H 9625 1750 50  0001 C CNN
-F 1 "GND" H 9630 1827 50  0000 C CNN
-F 2 "" H 9625 2000 50  0001 C CNN
-F 3 "" H 9625 2000 50  0001 C CNN
-	1    9625 2000
-	1    0    0    -1  
+P 8500 2175
+F 0 "#PWR024" H 8500 1925 50  0001 C CNN
+F 1 "GND" H 8505 2002 50  0000 C CNN
+F 2 "" H 8500 2175 50  0001 C CNN
+F 3 "" H 8500 2175 50  0001 C CNN
+	1    8500 2175
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x01_Female K1
 U 1 1 5DCAE7DC
-P 850 6000
-F 0 "K1" H 877 6026 50  0000 L CNN
-F 1 "Conn_01x01_Female" H 877 5935 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 850 6000 50  0001 C CNN
-F 3 "~" H 850 6000 50  0001 C CNN
-	1    850  6000
-	1    0    0    -1  
+P 775 5975
+F 0 "K1" H 802 6001 50  0000 L CNN
+F 1 " " H 802 5910 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x01_P2.54mm_Vertical" H 775 5975 50  0001 C CNN
+F 3 "~" H 775 5975 50  0001 C CNN
+	1    775  5975
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	600  6150 600  6000
+	1025 6050 1025 5975
 Wire Wire Line
-	600  6000 650  6000
+	975  5975 1025 5975
 $Comp
 L power:GND #PWR01
 U 1 1 5DCF65E6
-P 600 6150
-F 0 "#PWR01" H 600 5900 50  0001 C CNN
-F 1 "GND" H 605 5977 50  0000 C CNN
-F 2 "" H 600 6150 50  0001 C CNN
-F 3 "" H 600 6150 50  0001 C CNN
-	1    600  6150
+P 1025 6050
+F 0 "#PWR01" H 1025 5800 50  0001 C CNN
+F 1 "GND" H 1030 5877 50  0000 C CNN
+F 2 "" H 1025 6050 50  0001 C CNN
+F 3 "" H 1025 6050 50  0001 C CNN
+	1    1025 6050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C14
 U 1 1 5DCF86F2
-P 9900 1850
-F 0 "C14" H 9992 1896 50  0000 L CNN
-F 1 "4.7uF" H 9992 1805 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9900 1850 50  0001 C CNN
-F 3 "~" H 9900 1850 50  0001 C CNN
-	1    9900 1850
-	1    0    0    -1  
+P 8225 2025
+F 0 "C14" H 8317 2071 50  0000 L CNN
+F 1 "4.7uF" H 8317 1980 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8225 2025 50  0001 C CNN
+F 3 "~" H 8225 2025 50  0001 C CNN
+	1    8225 2025
+	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5400 2525 5400 2700
 Wire Wire Line
 	5050 2525 5050 2700
 Wire Wire Line
-	9575 1700 10350 1700
+	8550 1875 7775 1875
 $Comp
 L power:GND #PWR0101
 U 1 1 5DE568EF
-P 9900 2000
-F 0 "#PWR0101" H 9900 1750 50  0001 C CNN
-F 1 "GND" H 9905 1827 50  0000 C CNN
-F 2 "" H 9900 2000 50  0001 C CNN
-F 3 "" H 9900 2000 50  0001 C CNN
-	1    9900 2000
-	1    0    0    -1  
+P 8225 2175
+F 0 "#PWR0101" H 8225 1925 50  0001 C CNN
+F 1 "GND" H 8230 2002 50  0000 C CNN
+F 2 "" H 8225 2175 50  0001 C CNN
+F 3 "" H 8225 2175 50  0001 C CNN
+	1    8225 2175
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	9900 2000 9900 1950
+	8225 2175 8225 2125
 $Comp
-L LoRa_Tracker-rescue:1N4001-Diode D1
+L Diode:1N4001 D1
 U 1 1 5D56B640
-P 3750 1875
-F 0 "D1" V 3704 1954 50  0000 L CNN
-F 1 "PMEG3010EJ" V 3795 1954 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 3750 1700 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3750 1875 50  0001 C CNN
-	1    3750 1875
+P 3350 650
+F 0 "D1" V 3304 729 50  0000 L CNN
+F 1 "PMEG3010EJ" V 3395 729 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 3350 475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3350 650 50  0001 C CNN
+	1    3350 650 
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	2650 1100 2675 1100
 Wire Wire Line
-	3625 1100 4000 1100
+	3775 1375 3775 1100
 Wire Wire Line
-	4150 1375 4150 1100
+	8225 1675 8225 1925
+Connection ~ 8225 1675
 Wire Wire Line
-	9900 1500 9900 1750
-Connection ~ 9900 1500
-Wire Wire Line
-	9900 1500 10500 1500
+	8225 1675 7625 1675
 $Comp
 L Device:C_Small C15
 U 1 1 5DCC9543
@@ -1304,7 +1281,7 @@ $EndComp
 Wire Wire Line
 	2675 1175 2675 1100
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR0102
+L power:GND #PWR0102
 U 1 1 5DD08405
 P 2675 2050
 F 0 "#PWR0102" H 2675 1800 50  0001 C CNN
@@ -1317,7 +1294,7 @@ $EndComp
 Wire Wire Line
 	2675 1375 2675 2050
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C17
+L Device:C_Small C17
 U 1 1 5DFA66C9
 P 5300 2700
 F 0 "C17" V 5225 2850 50  0000 L TNN
@@ -1330,9 +1307,6 @@ $EndComp
 Connection ~ 5050 2700
 Wire Wire Line
 	5050 2700 5050 2725
-Connection ~ 5400 2700
-Wire Wire Line
-	5400 2700 5400 2850
 Wire Wire Line
 	5050 2700 5200 2700
 Wire Wire Line
@@ -1340,34 +1314,34 @@ Wire Wire Line
 $Comp
 L power:GND #PWR027
 U 1 1 5D9E9D02
-P 6950 6275
-F 0 "#PWR027" H 6950 6025 50  0001 C CNN
-F 1 "GND" H 6955 6102 50  0000 C CNN
-F 2 "" H 6950 6275 50  0001 C CNN
-F 3 "" H 6950 6275 50  0001 C CNN
-	1    6950 6275
-	1    0    0    -1  
+P 9700 6275
+F 0 "#PWR027" H 9700 6025 50  0001 C CNN
+F 1 "GND" H 9705 6102 50  0000 C CNN
+F 2 "" H 9700 6275 50  0001 C CNN
+F 3 "" H 9700 6275 50  0001 C CNN
+	1    9700 6275
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5D9EEF3B
-P 10475 700
-F 0 "H2" H 10575 746 50  0000 L CNN
-F 1 "MountingHole" H 10575 655 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 10475 700 50  0001 C CNN
-F 3 "~" H 10475 700 50  0001 C CNN
-	1    10475 700 
+P 6075 7525
+F 0 "H2" H 6175 7571 50  0000 L CNN
+F 1 "MountingHole" H 6175 7480 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 6075 7525 50  0001 C CNN
+F 3 "~" H 6075 7525 50  0001 C CNN
+	1    6075 7525
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5D9EF148
-P 10025 850
-F 0 "H1" H 10125 896 50  0000 L CNN
-F 1 "MountingHole" H 10125 805 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 10025 850 50  0001 C CNN
-F 3 "~" H 10025 850 50  0001 C CNN
-	1    10025 850 
+P 6075 7700
+F 0 "H1" H 6175 7746 50  0000 L CNN
+F 1 "MountingHole" H 6175 7655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 6075 7700 50  0001 C CNN
+F 3 "~" H 6075 7700 50  0001 C CNN
+	1    6075 7700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1393,55 +1367,49 @@ Connection ~ 10200 3900
 $Comp
 L Connector:Conn_01x03_Male K6
 U 1 1 5DB2F503
-P 10500 4950
-F 0 "K6" H 10550 4750 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 10473 4971 50  0001 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 10500 4950 50  0001 C CNN
-F 3 "~" H 10500 4950 50  0001 C CNN
-	1    10500 4950
+P 10600 4625
+F 0 "K6" H 10650 4425 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 10573 4646 50  0001 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 10600 4625 50  0001 C CNN
+F 3 "~" H 10600 4625 50  0001 C CNN
+	1    10600 4625
 	-1   0    0    1   
 $EndComp
 $Comp
 L Jumper:SolderJumper_2_Open JP1
 U 1 1 5DC174D5
-P 7200 6150
-F 0 "JP1" H 7200 6355 50  0000 C CNN
-F 1 "SolderJumper_2_Open" H 7200 6264 50  0001 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7200 6150 50  0001 C CNN
-F 3 "~" H 7200 6150 50  0001 C CNN
-	1    7200 6150
-	1    0    0    -1  
+P 9450 6150
+F 0 "JP1" H 9450 6355 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 9450 6264 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 9450 6150 50  0001 C CNN
+F 3 "~" H 9450 6150 50  0001 C CNN
+	1    9450 6150
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	7350 6150 7400 6150
+	9300 6150 9250 6150
 Wire Wire Line
-	6950 6275 6950 6150
+	9700 6275 9700 6150
 Wire Wire Line
-	6950 6150 7050 6150
+	9700 6150 9600 6150
 Wire Wire Line
-	6950 6150 6950 5400
+	9700 6150 9700 5400
 Wire Wire Line
-	6950 5400 8200 5400
-Connection ~ 6950 6150
+	9700 5400 8450 5400
+Connection ~ 9700 6150
 Wire Wire Line
-	7800 6150 7725 6150
+	8850 6150 8925 6150
 Wire Wire Line
-	7725 6150 7725 6325
+	8925 6150 8925 6325
 Wire Wire Line
-	7400 5850 7400 5625
+	9250 5850 9250 5625
 Wire Wire Line
-	7400 5625 8575 5625
+	9250 5625 8075 5625
 Wire Wire Line
-	8575 5625 8575 5950
+	8075 5625 8075 5950
 Wire Wire Line
-	8575 5950 8500 5950
-Connection ~ 7400 5850
-Connection ~ 5400 1925
-Wire Wire Line
-	1250 1250 1475 1250
-Wire Wire Line
-	1475 1250 1800 1250
-Connection ~ 1475 1250
+	8075 5950 8150 5950
+Connection ~ 9250 5850
 Wire Wire Line
 	1475 1450 1475 1825
 Wire Wire Line
@@ -1456,14 +1424,11 @@ Wire Wire Line
 Wire Wire Line
 	1950 1100 1950 1250
 Wire Wire Line
-	1950 1250 1800 1250
-Connection ~ 1800 1250
-Wire Wire Line
 	5825 1675 6050 1675
 Wire Wire Line
 	5825 875  5825 1675
 $Comp
-L LoRa_Tracker-rescue:C_Small-Device C18
+L Device:C_Small C18
 U 1 1 5DDF1AED
 P 5375 1025
 F 0 "C18" H 5175 1075 50  0000 L TNN
@@ -1486,8 +1451,6 @@ Wire Wire Line
 Wire Wire Line
 	5675 1275 5675 1200
 Connection ~ 5675 1200
-Wire Wire Line
-	4000 1100 4150 1100
 Wire Wire Line
 	5125 1100 5125 825 
 Wire Wire Line
@@ -1526,7 +1489,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 3750 4800 3750
 $Comp
-L LoRa_Tracker-rescue:ASH7KW-Elektor_Abracon X1
+L Elektor_Abracon:ASH7KW X1
 U 1 1 5DC7C619
 P 3350 3900
 F 0 "X1" H 3450 4175 50  0000 C CNN
@@ -1568,10 +1531,8 @@ Wire Wire Line
 Connection ~ 2125 1100
 Wire Wire Line
 	2125 1100 2450 1100
-Wire Wire Line
-	4000 1100 4000 1875
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR0103
+L power:GND #PWR0103
 U 1 1 5DD79332
 P 2800 2050
 F 0 "#PWR0103" H 2800 1800 50  0001 C CNN
@@ -1588,11 +1549,8 @@ Wire Wire Line
 	2800 1200 2800 2050
 Wire Wire Line
 	2975 1200 2800 1200
-Connection ~ 4000 1100
 Wire Wire Line
-	3550 1875 3600 1875
-Wire Wire Line
-	3900 1875 4000 1875
+	3150 650  3200 650 
 Wire Wire Line
 	2925 1300 2925 1500
 Wire Wire Line
@@ -1613,181 +1571,168 @@ Wire Wire Line
 $Comp
 L Device:C_Small C21
 U 1 1 5DB914C7
-P 5125 1200
-F 0 "C21" H 5217 1246 50  0000 L CNN
-F 1 "100uF" H 5217 1155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5125 1200 50  0001 C CNN
-F 3 "~" H 5125 1200 50  0001 C CNN
-	1    5125 1200
+P 4775 1200
+F 0 "C21" H 4867 1246 50  0000 L CNN
+F 1 "100uF" H 4867 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4775 1200 50  0001 C CNN
+F 3 "~" H 4775 1200 50  0001 C CNN
+	1    4775 1200
 	1    0    0    -1  
 $EndComp
-Connection ~ 5125 1100
 $Comp
 L Device:C_Small C20
 U 1 1 5DB915A1
-P 4875 1200
-F 0 "C20" H 4967 1246 50  0000 L CNN
-F 1 "100uF" H 4967 1155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4875 1200 50  0001 C CNN
-F 3 "~" H 4875 1200 50  0001 C CNN
-	1    4875 1200
+P 4525 1200
+F 0 "C20" H 4617 1246 50  0000 L CNN
+F 1 "100uF" H 4617 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4525 1200 50  0001 C CNN
+F 3 "~" H 4525 1200 50  0001 C CNN
+	1    4525 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C19
 U 1 1 5DBA4E7A
-P 4650 1200
-F 0 "C19" H 4742 1246 50  0000 L CNN
-F 1 "100uF" H 4742 1155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4650 1200 50  0001 C CNN
-F 3 "~" H 4650 1200 50  0001 C CNN
-	1    4650 1200
+P 4300 1200
+F 0 "C19" H 4392 1246 50  0000 L CNN
+F 1 "100uF" H 4392 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4300 1200 50  0001 C CNN
+F 3 "~" H 4300 1200 50  0001 C CNN
+	1    4300 1200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C16
 U 1 1 5DBB874E
-P 4400 1200
-F 0 "C16" H 4492 1246 50  0000 L CNN
-F 1 "100uF" H 4492 1155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4400 1200 50  0001 C CNN
-F 3 "~" H 4400 1200 50  0001 C CNN
-	1    4400 1200
+P 4050 1200
+F 0 "C16" H 4142 1246 50  0000 L CNN
+F 1 "100uF" H 4142 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4050 1200 50  0001 C CNN
+F 3 "~" H 4050 1200 50  0001 C CNN
+	1    4050 1200
 	1    0    0    -1  
 $EndComp
-Connection ~ 4150 1100
 Wire Wire Line
-	4150 1100 4400 1100
-Connection ~ 4400 1100
+	4050 1300 4050 1400
 Wire Wire Line
-	4400 1100 4650 1100
-Connection ~ 4650 1100
+	4050 1400 4300 1400
 Wire Wire Line
-	4650 1100 4875 1100
-Connection ~ 4875 1100
+	4775 1400 4775 1300
 Wire Wire Line
-	4875 1100 5125 1100
+	4525 1300 4525 1400
+Connection ~ 4525 1400
 Wire Wire Line
-	4400 1300 4400 1400
+	4525 1400 4775 1400
 Wire Wire Line
-	4400 1400 4650 1400
+	4300 1300 4300 1400
+Connection ~ 4300 1400
 Wire Wire Line
-	5125 1400 5125 1300
-Wire Wire Line
-	4875 1300 4875 1400
-Connection ~ 4875 1400
-Wire Wire Line
-	4875 1400 5125 1400
-Wire Wire Line
-	4650 1300 4650 1400
-Connection ~ 4650 1400
-Wire Wire Line
-	4650 1400 4775 1400
+	4300 1400 4425 1400
 $Comp
 L power:GND #PWR0104
 U 1 1 5DC6E464
-P 4775 1500
-F 0 "#PWR0104" H 4775 1250 50  0001 C CNN
-F 1 "GND" H 4780 1327 50  0000 C CNN
-F 2 "" H 4775 1500 50  0001 C CNN
-F 3 "" H 4775 1500 50  0001 C CNN
-	1    4775 1500
+P 4425 1500
+F 0 "#PWR0104" H 4425 1250 50  0001 C CNN
+F 1 "GND" H 4430 1327 50  0000 C CNN
+F 2 "" H 4425 1500 50  0001 C CNN
+F 3 "" H 4425 1500 50  0001 C CNN
+	1    4425 1500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4775 1400 4775 1500
-Connection ~ 4775 1400
+	4425 1400 4425 1500
+Connection ~ 4425 1400
 Wire Wire Line
-	4775 1400 4875 1400
-Text GLabel 7775 2725 0    50   Input ~ 0
+	4425 1400 4525 1400
+Text GLabel 10175 5100 0    50   Input ~ 0
 JTDI
-Text GLabel 7775 3125 0    50   Input ~ 0
+Text GLabel 10175 5500 0    50   Input ~ 0
 JTDO
 $Comp
 L Device:R_Small R2
 U 1 1 5DC154DB
-P 7975 2725
-F 0 "R2" V 7803 2725 39  0000 C CNN
-F 1 "680R" V 7878 2725 39  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7975 2725 50  0001 C CNN
-F 3 "~" H 7975 2725 50  0001 C CNN
-	1    7975 2725
+P 10375 5100
+F 0 "R2" V 10203 5100 39  0000 C CNN
+F 1 "680R" V 10278 5100 39  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10375 5100 50  0001 C CNN
+F 3 "~" H 10375 5100 50  0001 C CNN
+	1    10375 5100
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_Small R10
 U 1 1 5DC15693
-P 7975 3125
-F 0 "R10" V 8147 3125 39  0000 C CNN
-F 1 "680R" V 8072 3125 39  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7975 3125 50  0001 C CNN
-F 3 "~" H 7975 3125 50  0001 C CNN
-	1    7975 3125
+P 10375 5500
+F 0 "R10" V 10547 5500 39  0000 C CNN
+F 1 "680R" V 10472 5500 39  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10375 5500 50  0001 C CNN
+F 3 "~" H 10375 5500 50  0001 C CNN
+	1    10375 5500
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:LED LED1
 U 1 1 5DC6B586
-P 8300 2725
-F 0 "LED1" H 8292 2470 50  0000 C CNN
-F 1 "LED_RED" H 8292 2561 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8300 2725 50  0001 C CNN
-F 3 "~" H 8300 2725 50  0001 C CNN
-	1    8300 2725
+P 10700 5100
+F 0 "LED1" H 10692 4845 50  0000 C CNN
+F 1 "LED_RED" H 10692 4936 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10700 5100 50  0001 C CNN
+F 3 "~" H 10700 5100 50  0001 C CNN
+	1    10700 5100
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED LED2
 U 1 1 5DC6B736
-P 8300 3125
-F 0 "LED2" H 8292 2870 50  0000 C CNN
-F 1 "LED_GREEN" H 8292 2961 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8300 3125 50  0001 C CNN
-F 3 "~" H 8300 3125 50  0001 C CNN
-	1    8300 3125
+P 10700 5500
+F 0 "LED2" H 10692 5245 50  0000 C CNN
+F 1 "LED_GREEN" H 10692 5336 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10700 5500 50  0001 C CNN
+F 3 "~" H 10700 5500 50  0001 C CNN
+	1    10700 5500
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8075 2725 8150 2725
+	10475 5100 10550 5100
 Wire Wire Line
-	8075 3125 8150 3125
+	10475 5500 10550 5500
 Wire Wire Line
-	7775 2725 7875 2725
+	10175 5100 10275 5100
 Wire Wire Line
-	7775 3125 7875 3125
+	10175 5500 10275 5500
 $Comp
-L LoRa_Tracker-rescue:GND-power #PWR026
+L power:GND #PWR026
 U 1 1 5DCD8937
-P 8550 3325
-F 0 "#PWR026" H 8550 3075 50  0001 C CNN
-F 1 "GND" H 8555 3152 50  0000 C CNN
-F 2 "" H 8550 3325 50  0001 C CNN
-F 3 "" H 8550 3325 50  0001 C CNN
-	1    8550 3325
+P 10950 5700
+F 0 "#PWR026" H 10950 5450 50  0001 C CNN
+F 1 "GND" H 10955 5527 50  0000 C CNN
+F 2 "" H 10950 5700 50  0001 C CNN
+F 3 "" H 10950 5700 50  0001 C CNN
+	1    10950 5700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8450 3125 8550 3125
+	10850 5500 10950 5500
 Wire Wire Line
-	8450 2725 8550 2725
-Connection ~ 8550 3125
+	10850 5100 10950 5100
+Connection ~ 10950 5500
 Wire Wire Line
-	8550 3125 8550 3325
+	10950 5500 10950 5700
 Wire Wire Line
-	8550 2725 8550 3125
+	10950 5100 10950 5500
 Text Notes 700  3575 0    50   ~ 0
 VBAT\n
 Text Notes 850  3500 0    50   ~ 0
 +\n
 Text Notes 850  3650 0    50   ~ 0
 -\n
-Text Notes 7050 1850 0    50   ~ 0
+Text Notes 11075 1975 2    50   ~ 0
 GPS TX
-Text Notes 7050 1750 0    50   ~ 0
+Text Notes 11075 1875 2    50   ~ 0
 GPS RX
-Text Notes 7050 1650 0    50   ~ 0
+Text Notes 11075 1775 2    50   ~ 0
 GND\n
-Text Notes 7050 1550 0    50   ~ 0
+Text Notes 11075 1675 2    50   ~ 0
 VCC
 Text Notes 10650 2600 0    50   ~ 0
 V BAT
@@ -1831,11 +1776,11 @@ Text Notes 625  4450 0    50   ~ 0
 USB DP
 Text Notes 750  4550 0    50   ~ 0
 GND
-Text Notes 10600 4850 0    50   ~ 0
+Text Notes 10700 4525 0    50   ~ 0
 RST
-Text Notes 10600 4950 0    50   ~ 0
+Text Notes 10700 4625 0    50   ~ 0
 JTDO
-Text Notes 10600 5050 0    50   ~ 0
+Text Notes 10700 4725 0    50   ~ 0
 JTDI
 Text Notes 2200 1250 0    50   ~ 0
 UVL
@@ -1870,52 +1815,81 @@ $EndComp
 $Comp
 L MAX40200:MAX40200 IC6
 U 1 1 5DC56769
-P 9275 1400
-F 0 "IC6" H 9300 1525 50  0000 C CNN
-F 1 "MAX40200" H 9300 1434 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 9275 1000 50  0001 C CNN
-F 3 "" H 9275 1000 50  0001 C CNN
-	1    9275 1400
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	9575 1500 9725 1500
-Wire Wire Line
-	9725 1750 9725 1500
-Connection ~ 9725 1500
-Wire Wire Line
-	9725 1500 9900 1500
-Wire Wire Line
-	9625 1600 9625 2000
-$Comp
-L power:GND #PWR?
-U 1 1 5DDA4D11
-P 8675 1950
-F 0 "#PWR?" H 8675 1700 50  0001 C CNN
-F 1 "GND" H 8680 1777 50  0000 C CNN
-F 2 "" H 8675 1950 50  0001 C CNN
-F 3 "" H 8675 1950 50  0001 C CNN
-	1    8675 1950
+P 8850 1575
+F 0 "IC6" H 8875 1700 50  0000 C CNN
+F 1 "MAX40200" H 8875 1609 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 8850 1175 50  0001 C CNN
+F 3 "" H 8850 1175 50  0001 C CNN
+	1    8850 1575
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8675 1775 8675 1950
+	8500 1775 8500 2175
+$Comp
+L power:GND #PWR?
+U 1 1 5DDA4D11
+P 9450 2125
+F 0 "#PWR?" H 9450 1875 50  0001 C CNN
+F 1 "GND" H 9455 1952 50  0000 C CNN
+F 2 "" H 9450 2125 50  0001 C CNN
+F 3 "" H 9450 2125 50  0001 C CNN
+	1    9450 2125
+	-1   0    0    -1  
+$EndComp
 Wire Wire Line
-	7575 1500 8675 1500
+	9450 1950 9450 2125
+Wire Wire Line
+	10550 1675 9450 1675
 $Comp
 L Device:C_Small C13
 U 1 1 5DDE7867
-P 8675 1675
-F 0 "C13" V 8904 1675 50  0000 C CNN
-F 1 "100nF" V 8813 1675 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8675 1675 50  0001 C CNN
-F 3 "~" H 8675 1675 50  0001 C CNN
-	1    8675 1675
-	-1   0    0    1   
+P 9450 1850
+F 0 "C13" V 9679 1850 50  0000 C CNN
+F 1 "100nF" V 9588 1850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9450 1850 50  0001 C CNN
+F 3 "~" H 9450 1850 50  0001 C CNN
+	1    9450 1850
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	8675 1575 8675 1500
-Connection ~ 8675 1500
+	9450 1750 9450 1675
+Connection ~ 9450 1675
 Wire Wire Line
-	8675 1500 8925 1500
+	9450 1675 9200 1675
+Wire Wire Line
+	8225 1675 8550 1675
+Wire Wire Line
+	3625 1100 3775 1100
+Wire Wire Line
+	3925 650  3925 1100
+Wire Wire Line
+	3500 650  3925 650 
+Connection ~ 3925 1100
+Connection ~ 3775 1100
+Wire Wire Line
+	3775 1100 3925 1100
+Wire Wire Line
+	3925 1100 4050 1100
+Connection ~ 4050 1100
+Wire Wire Line
+	4050 1100 4300 1100
+Connection ~ 4300 1100
+Connection ~ 4525 1100
+Connection ~ 4775 1100
+Wire Wire Line
+	4300 1100 4525 1100
+Wire Wire Line
+	4525 1100 4775 1100
+Wire Wire Line
+	4775 1100 5125 1100
+Wire Wire Line
+	875  1400 675  1400
+Text Notes 7400 1225 0    50   ~ 0
+Copyright Elektor 2019.\nThis documentation describes Open Hardware and is licensed under the CERN OHL v. 1.2.\nYou may redistribute and modify this documentation \nunder the terms of the CERN OHL v.1.2. (http://ohwr.org/cernohl). \nThis documentation is distributed \nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY,\nSATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. \n\nPlease see the CERN OHL v.1.2 for applicable conditions
+Wire Wire Line
+	4400 3250 4800 3250
+Wire Wire Line
+	1250 1250 1950 1250
+Wire Wire Line
+	5400 1725 5400 2850
 $EndSCHEMATC

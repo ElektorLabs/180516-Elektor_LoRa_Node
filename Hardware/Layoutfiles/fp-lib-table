@@ -1,6 +1,0 @@
-(fp_lib_table
-  (lib (name CAM-M8Q-0)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/CAM-M8Q/CAM-M8Q-0.mod)(options "")(descr ""))
-  (lib (name RFM95W-868S2)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/RFM95W-868S2/RFM95W-868S2.mod)(options "")(descr ""))
-  (lib (name ATECC608A)(type KiCad)(uri ${KIPRJMOD}/Component_Libs/ATECC608A)(options "")(descr "")(disabled))
-  (lib (name PUSB)(type KiCad)(uri ${KIPRJMOD}/Component_Libs/PUSB)(options "")(descr ""))
-)

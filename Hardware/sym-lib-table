@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name Elektor_Abracon)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/DS1302_DropInUpdate.pretty/Elektor_Abracon.lib)(options "")(descr ""))
+  (lib (name MAX40200)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/Maxim/MAX40200.lib)(options "")(descr ""))
+  (lib (name PUSB2X4Y)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/PUSB/PUSB2X4Y.lib)(options "")(descr ""))
+  (lib (name TLV803EA26DBZR)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/TLV803EA26DBZR/TLV803EA26DBZR.lib)(options "")(descr ""))
+  (lib (name SI2347DS)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/SI2347DS/SI2347DS.lib)(options "")(descr ""))
+  (lib (name ATECC608A)(type Legacy)(uri ${KIPRJMOD}/Component_Libs/ATECC608A/ATECC608A.lib)(options "")(descr ""))
+)
